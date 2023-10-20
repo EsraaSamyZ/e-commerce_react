@@ -25,3 +25,22 @@ test('when we click increment button the counter value should be increased', () 
   fireEvent.click(incrementButton);
   expect(countElement).toHaveTextContent('11');
 });
+
+test('should render decrement button', () => {
+  render(<Counter />);
+  const decrementButton = screen.getByRole('button', { name: 'Decrement' });
+  expect(decrementButton).toBeInTheDocument();
+  expect(decrementButton).toBeEnabled();
+});
+
+test('when we click decrement button the counter value should be decreased', () => {
+  render(<Counter />);
+  
+  const countElement = screen.getByTestId('count');
+  expect(countElement).toBeInTheDocument();
+  expect(countElement).toHaveTextContent('10');
+  const decrementButton = screen.getByRole('button', { name: 'Decrement' });
+
+  fireEvent.click(decrementButton);
+  expect(countElement).toHaveTextContent('9');
+});
