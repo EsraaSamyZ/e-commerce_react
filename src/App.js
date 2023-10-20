@@ -4,6 +4,9 @@ import Home from './components/Home';
 import About from './components/About';
 import Shop from './components/Shop';
 import ProductDetails from './components/ProductDetails';
+import Counter from './components/Counter/Counter';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
@@ -14,6 +17,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/shop/:id" element={<ProductDetails />} />
+        <Route path="/counter" element={<Counter />} />
       </Routes>
     </Router>
   );

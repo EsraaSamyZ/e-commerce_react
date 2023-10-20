@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom';
-import Counter from './counter';
-
 
 function Navbar() {
   return (
@@ -22,7 +20,7 @@ function Navbar() {
               <Link className="nav-link" to="/shop">Shop</Link>
             </li>
             <li className="nav-item">
-            <Counter />
+              <Link className="nav-link" to="/counter">Counter</Link>
             </li>
           </ul>
         </div>
