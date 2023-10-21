@@ -36,7 +36,7 @@ test('should render decrement button', () => {
 test('when we click decrement button the counter value should be decreased', () => {
   render(<Counter />);
   
-  const countElement = screen.getByTestId('count');
+  const countElement = screen.getByText('10');
   expect(countElement).toBeInTheDocument();
   expect(countElement).toHaveTextContent('10');
   const decrementButton = screen.getByRole('button', { name: 'Decrement' });
