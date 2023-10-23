@@ -5,6 +5,8 @@ import About from './components/About';
 import Shop from './components/shop/Shop';
 import ProductDetails from './components/product/ProductDetails';
 import Counter from './components/Counter/Counter';
+import Register from './components/Register';
+import Login from './components/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
@@ -19,6 +21,8 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/shop/:id" element={<ProductDetails />} />
         <Route path="/counter" element={<Counter />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   );
